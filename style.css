@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.table-wrapper {
+    overflow-x:scroll; /*горизонталь*/
+    overflow-y:scroll;/*вертикаль*/
+    width: 600px;
+    height: 400px;
+    
+}
+
+table {
+    width: 1200px;
+    height: 800px;
+    border-collapse: collapse;
+    border: 2px solid #ddd;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #4CAF50; /* Цвет заголовка */
+    color: white;
+    font-weight: bold;
+}
+
+td {
+    background-color: #f2f2f2; /* Цвет ячеек */
+}
+
+/* Стилизация первого столбца (Line N) — делаем его более заметным */
+td:first-child, th:first-child {
+    background-color: #2196F3; /* Отдельный цвет для первого столбца */
+    color: white;
+    font-weight: bold;
+}
+
+/* Чередование цвета строк для лучшей читаемости */
+tr:nth-child(even) td {
+    background-color: #69af6b; /* Цвет заголовка */
+}
+
+/* Убираем границы для заголовков, чтобы они выглядели аккуратнее */
+th {
+    border-bottom: 2px solid #4CAF50;
+}
