@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="menu">
+        <ul>
+            <li><a href="#">Пункт 1</a></li>
+            <li><a href="#">Пункт 2</a></li>
+            <li><a href="#">Пункт 3</a></li>
+            <li><a href="#">Пункт 4</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <!-- Содержимое страницы -->
+        <h1 id="colored-title1">WHAT IS LOREM IPSUM?</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque consequatur, dolore hic aperiam expedita officia repudiandae quisquam mollitia. Iure suscipit eveniet quasi aliquam reprehenderit exercitationem dolorem eaque et beatae reiciendis!</p>
+        <h1 id="colored-title2">WHY DO WE USE IT?</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis qui exercitationem sunt minus deleniti libero aliquid repudiandae at, provident sint? Doloribus magnam necessitatibus minima, exercitationem quasi beatae voluptatem reprehenderit placeat.</p>
+        <h1 id="colored-title3">WHERE DOES IT COME FROM?</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem ab excepturi cum quos dicta vel aliquid eaque. Maxime, rerum, ea vero quidem quis fuga corrupti fugit, repellat eaque quo illo!</p>
+    </div>
+<!-- Скрипт для раскраски букв -->
+  <script>
+    // Список ID элементов, которые нужно обработать
+    const titleIds = ['colored-title1', 'colored-title2', 'colored-title3'];
+
+    // Проходим по каждому ID
+    titleIds.forEach(id => {
+      const title = document.getElementById(id); // Получаем элемент по ID
+      const letters = title.innerText.split(''); // Разбиваем текст на буквы
+
+      // Очищаем элемент перед добавлением новых <span> (чтобы избежать дублирования)
+      title.innerHTML = '';
+
+      // Проходим по каждой букве и добавляем её в <span> с цветом
+      letters.forEach((letter, index) => {
+        const span = document.createElement('span');
+        span.style.color = `hsl(${index * 360 / letters.length}, 100%, 50%)`; // Градиент
+        span.textContent = letter;
+        title.appendChild(span);
+      });
+    });
+  </script>
+</body>
+</html>

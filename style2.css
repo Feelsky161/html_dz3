@@ -1,0 +1,65 @@
+/* Сброс отступов и полей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Фиксируем меню по высоте браузера и убираем прокрутку */
+.menu {
+    position: fixed; /* Фиксируем меню */
+    top: 0;
+    left: 0;
+    width: 70px; /* Начальная ширина меню (свернутое состояние) */
+    height: 100vh; /* Занимает всю высоту браузера */
+    background-color: #a9c9eecc;
+    transition: width 1s; /* Плавное изменение ширины за 1 секунду */
+    overflow-y: auto; /* Позволяем прокручивать меню, если пунктов много */
+}
+
+/* Стили для списка меню */
+.menu ul {
+    list-style: none;
+}
+
+.menu li {
+    padding: 10px 0;
+}
+
+.menu a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s; /* Плавное изменение фона пунктов меню */
+}
+
+/* Выделяем активный пункт меню при наведении */
+.menu a:hover {
+    background-color: #000000a2;
+}
+
+/* Раскрываем меню при наведении курсора */
+.menu:hover {
+    width: 200px; /* Полная ширина меню при раскрытии */
+}
+
+/* Стили для основного содержимого */
+.content {
+    margin-left: 70px; /* Отступ слева для размещения меню */
+    padding: 20px;
+    min-height: 100vh;
+}
+body {
+  width: 100vh;
+  height: 100vh;
+  background-image: url("https://i.pinimg.com/originals/57/03/f4/5703f4a5dcb796113f824108c870c9d4.jpg");
+  background-size: cover; /* Подстраивает картинку под размеры элемента без деформации, обрезая лишнее */
+  background-position: center; /* Центрирует изображение */
+  background-repeat: no-repeat; /* Запрещает повторение изображения */
+}
+p {
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px; /* радиус скругления в пикселях */
+  font-size: 24px
+}
